@@ -1,0 +1,42 @@
+main{
+    display: flex;
+    .title{
+        background: rgba( 209, 11, 11, 0.55 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding: 0.5rem;
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem;
+    }
+    .valor{
+        background: rgba(250, 250, 250, 0.801);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding: 0.5rem;
+        width: 8vw;
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem;
+    }
+    .tipo{
+        background: rgba(232, 235, 74, 0.55);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding: 0.5rem;
+        width: 16vw;
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem;
+    }
+}

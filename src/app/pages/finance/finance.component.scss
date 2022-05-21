@@ -1,0 +1,132 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    padding: 2rem;
+    margin: 2rem;
+    width: 18vw;
+
+    text-align: center;
+}
+
+.green{
+    background-color: #7dd321a8;
+}
+
+.red{
+    background-color: #e93333b0;
+}
+
+.blue{
+    background-color: rgba(0, 0, 255, 0.466);
+}
+
+.titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.add{
+    input{
+        padding: 0.2rem;
+        margin: 0.5rem;
+        border: none;
+        border-bottom: 0.1rem solid rgba(44, 43, 43, 0.589);
+        transition: 1s;
+        width: 25vw;
+    }
+    :focus{
+        border-bottom: 0.1rem solid rgba(44, 43, 43, 0.888);
+    }
+    select{
+        background-color: transparent;
+        border: none;
+        margin: 0.5rem;
+    }
+}
+
+.classes{
+    display: flex;
+    width: 45vw;
+    justify-content: space-around;
+    margin: 1rem;
+    p{
+        border-bottom: 0.2rem solid rgba(99, 96, 96, 0.416);
+        border-radius: 0.2rem;
+        padding: 0.1rem;
+    }
+}
+
+.alert{
+    background: rgba(209, 11, 11, 0.906);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    padding: 0.5rem;
+
+    position: fixed;
+    bottom: 0.3rem;
+    right: 0.5rem;
+
+    border-radius: 0.4rem;
+}
+
+.finance{
+    display: flex;
+    button{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        mat-icon{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .cards{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .titles{
+        width: auto;
+    }
+    .add{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        app-btn{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    app-bnt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

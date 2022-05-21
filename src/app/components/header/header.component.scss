@@ -1,0 +1,31 @@
+header{
+    background-color: #5768a1;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.3rem;
+    align-items: center;
+    h1{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            cursor: pointer;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            background-color: #738adb;
+            border-radius: 0.5rem;
+            transition: 1s;
+            a{
+                color: #fff;
+                background-color: transparent;
+            }
+        }
+        :hover{
+            background-color: rgb(1, 27, 53);
+        }
+    }
+}

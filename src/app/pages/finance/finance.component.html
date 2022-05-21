@@ -1,0 +1,56 @@
+<main>
+    <h1>Finance</h1>
+    <div class="cards">
+        <div class="card green">
+            <div class="titles">
+                <p>Entradas</p>
+                <mat-icon>trending_up</mat-icon>
+            </div>
+            <div class="value">
+                {{valor_entrada | currency: 'BRL'}}
+            </div>
+        </div>
+        <div class="card red">
+            <div class="titles">
+                <p>Saidas</p>
+                <mat-icon>trending_down</mat-icon>
+            </div>
+            <div class="value">
+                {{valor_saida | currency: 'BRL'}}
+            </div>
+        </div>
+        <div [class.blue]="blue" class="card">
+            <div class="titles">
+                <p>Total</p>
+                <mat-icon>attach_moneyn</mat-icon>
+            </div>
+            <div class="value">
+                {{ valor_total | currency: 'BRL' }}
+            </div>
+        </div>
+    </div>
+    <div class="add" >
+        <input type="text" placeholder="description" required #name>
+        <input type="text" placeholder="value" required #cache>
+        <select #select>
+            <option>Entrada</option>
+            <option>Saída</option>
+        </select>
+        <app-btn text="Adicionar" (click)="handleAddClick(name.value,cache.value,select.value)"></app-btn>
+    </div>
+    <div *ngIf='alert'>
+        <div class="alert" role="alert">
+            Adicione um nome ou um valor a financia!
+        </div>          
+    </div>
+    <div class="classes"> 
+        <p>nome</p>
+        <p>valor</p>
+        <p>tipo</p>
+    </div>
+    <div *ngFor="let financia of finance_list" class="finance">
+        <app-card-finance [title]="financia.name" [valor]="financia.valor" [tipo]="financia.tipo"></app-card-finance>
+        <button (click)="removefinance(financia.id, financia.valor, financia.tipo)"><mat-icon>delete_forever</mat-icon></button>
+    </div>
+</main>
+
